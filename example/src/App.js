@@ -16,7 +16,7 @@ const App = () => {
 
       <button onClick={e => setRun(true)}>Start</button>
       <button onClick={e => setRun(false)}>Pause</button>
-      <CountDown  s={seconds} m={minutes} h={hours} run={run} setRun={setRun} />
+      <CountDown  s={5} m={minutes} h={hours} run={run} setRun={setRun} />
     </div>
     )
 }
