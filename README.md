@@ -15,16 +15,20 @@ npm install --save countdown-react
 ```jsx
 import React from 'react'
 
-import CountDown from 'countdown-react'
-import 'countdown-react/dist/index.css'
+import CountDown from "countdown-react-component";
 
 const Example = () => {
-  return {
-     <CountDown s={35} m={1} h={0}/>
-  }
+  const [run, setRun] = useState(false)
+    return (
+      <div>
+        <button onClick={e => setRun(true)}>Start</button>
+        <CountDown s={35} run={run} setRun={setRun}/>
+      </div>
+    )
 }
 ```
-
+Check out usage examples
+[in playground](https://stackblitz.com/edit/react-countdown-component?file=src/App.js "react-countdown-hook on stackblitz")
 ## Documentation
 ### parameters
 * `s` {`number`} seconds that countdown is going to run
@@ -36,7 +40,7 @@ const Example = () => {
 ### full example
 ```jsx
 import React, {useState} from 'react'
-import CountDown from 'countdown-react'
+import CountDown from "countdown-react-component";
 
 const App = () => {
   const [run, setRun] = useState(false)
